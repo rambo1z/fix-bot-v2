@@ -519,19 +519,19 @@ const listMessage = {
                 },
                 {
                     quickReplyButton: {
-                        displayText: 'Owner',
+                        displayText: 'المالك',
                         id: '.owner'
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: 'Speed',
+                        displayText: 'اختبار السرعة',
                         id: '.speed'
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: 'Donasi',
+                        displayText: 'قروب الدعم',
                         id: '.donasi'
                     }
                 },
