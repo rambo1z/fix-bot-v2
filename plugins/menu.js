@@ -9,19 +9,19 @@ import fetch from 'node-fetch'
 const defaultMenu = {
   before: `
 %dash
-%m1 *U S E R*
-%m2 *Name:* %name
-%m2 *Tag:* %tag
-%m2 *Status:* %prems
-%m2 *Limit:* %limit
-%m2 *Money:* %money
-%m2 *Role:* %role
-%m2 *Level:* %level [ %xp4levelup Xp For Levelup]
-%m2 *Xp:* %exp / %maxexp
-%m2 *Total Xp:* %totalexp
+%m1 *المستحدم*
+%m2 *الاسم:* %name
+%m2 *المنشن:* %tag
+%m2 *الحالة:* %prems
+%m2 *الحد:* %limit
+%m2 *الفلوس:* %money
+%m2 *القوانين:* %role
+%m2 *المستوى:* %level [ %xp4levelup Xp For Levelup]
+%m2 *اكس بي:* %exp / %maxexp
+%m2 *المجموع Xp:* %totalexp
 %m3
 
-%m1 *T O D A Y*
+%m1 *الـيـوم*
 %m2 *%ucpn*
 %m2 *Days:* %week %weton
 %m2 *Date:* %date
@@ -29,20 +29,20 @@ const defaultMenu = {
 %m2 *Time:* %wib
 %m3
 
-%m1 *I N F O*
-%m2 *Bot Name:* %me
-%m2 *Mode:* %mode
-%m2 *Platform:* %platform
-%m2 *Type:* Node.Js
+%m1 *مـعـلـومـات*
+%m2 *اسم البوت:* %me
+%m2 *المود:* %mode
+%m2 *المنصة:* %platform
+%m2 *النوع* Node.Js
 %m2 *Baileys:* Multi Device
 %m2 *Prefix:* [ *%_p* ]
-%m2 *Uptime:* %muptime
-%m2 *Database:* %rtotalreg dari %totalreg
+%m2 *مدة التشغيل:* %muptime
+%m2 *داتا بيس:* %rtotalreg dari %totalreg
 %m3
 
-%m1 *I N F O  C M D* 
-%m4 *Ⓟ* = Premium
-%m4 *Ⓛ* = Limit
+%m1 *معلومات الاوامر* 
+%m4 *Ⓟ* = مميز
+%m4 *Ⓛ* = محدود
 %m3
 %readmore
 `.trimStart(),
@@ -220,49 +220,49 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     let mpt = clockString(_mpt)
       const sections = [
    {
-	title: `${htki} MAIN ${htka}`,
+	title: `${htki} الرئيسية ${htka}`,
 	rows: [
-	    {title: `⚡ ${pmenus} SPEED BOT`, rowId: ".speed", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `💌 ${pmenus} OWNER BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
+	    {title: `⚡ ${pmenus} سرعة البوت`, rowId: ".speed", description: "يظهر سرعة استجابة البوت"},
+	    {title: `💌 ${pmenus} مالتك البوت`, rowId: ".owner", description: "قائمة الاوامر الخاصة بالمالك"},
 	    {title: `📔 ${pmenus} SCRIPT BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
 	]
     },{
-	title: `${htki} SUPPORT ${htka}`,
+	title: `${htki} الـدعـم ${htka}`,
 	rows: [
 	    {title: `🔖 ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
 	    {title: `🌟 ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
 	    {title: `💹 ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
-	title: `${htki} MENU ${htka}`,
+	title: `${htki} القائمة ${htka}`,
 	rows: [
-	    {title: `💬 ${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-	    {title: `🌱 ${pmenus} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-	{title: `✨ ${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-	{title: `🎮 ${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
-	{title: `🧩 ${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
-	{title: `🐚 ${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
-	{title: `📑 ${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
-	{title: `⛩️ ${pmenus} Anime`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
-	{title: `🔞 ${pmenus} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
-	{title: `🌟 ${pmenus} Premium`, rowId: ".? premium", description: "Only premium Users"},
-	{title: `🎭 ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-	{title: `📖 ${pmenus} Al-Quran`, rowId: ".? quran", description: "Tobat yuk kak"},
-	{title: `🌎 ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-  {title: `🌎 ${pmenus} Berita`, rowId: ".? berita", description: "Cari berita terupdate"},
-	{title: `📩 ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
-	{title: `🎨 ${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-	{title: `🎨 ${pmenus} Logo`, rowId: ".? logo", description: "Buat Logo Kamu diBOT"},
-	{title: `✏️ ${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-	{title: `🎧 ${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-  {title: `🎧 ${pmenus} Sound Menu`, rowId: ".soundmenu", description: "Kumpulan 120 Sound"},
-	{title: `🏢 ${pmenus} Group`, rowId: ".? group", description: "Only Groups"},
-	{title: `👑 ${pmenus} Admin`, rowId: ".? admin", description: "Only Admin Group"},
-	{title: `🗂️ ${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-	{title: `🛠️ ${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-	{title: `ℹ️ ${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `👩‍💻 ${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
-	{title: `❓ ${pmenus} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
+	    {title: `💬 ${pmenus} الكل`, rowId: ".? all", description: "يظهر كل الاوامر"},
+	    {title: `🌱 ${pmenus} ار بي جي`, rowId: ".? rpg", description: " العاب ار بي جي!"},
+	{title: `✨ ${pmenus} اكس بي`, rowId: ".? xp", description: "ارفع مستواك!"},
+	{title: `🎮 ${pmenus} العاب`, rowId: ".? game", description: " العاب جماعية  >-<"},
+	{title: `🧩 ${pmenus} تسلية`, rowId: ".? fun", description: "اوامر مسلية"},
+	{title: `🐚 ${pmenus} صَدَفة`, rowId: ".? kerangajaib", description: "اوامر للتسلية"},
+	{title: `📑 ${pmenus} اقتباسات`, rowId: ".? quotes", description: "اقتباسات عشوائية"},
+	{title: `⛩️ ${pmenus} الانمي`, rowId: ".? anime", description: "اوامر للويبز"},
+	{title: `🔞 ${pmenus} مم`, rowId: ".? nsfw", description: ","},
+	{title: `🌟 ${pmenus} المميز`, rowId: ".? premium", description: "."},
+	{title: `🎭 ${pmenus}  دردشةالانونيموس`, rowId: ".? anonymous", description: "اشياء مالها فايدة"},
+	{title: `📖 ${pmenus} القران`, rowId: ".? quran", description: "اجعلها حسنة"},
+	{title: `🌎 ${pmenus} انترنت`, rowId: ".? internet", description: "تصفح عللى النت"},
+  {title: `🌎 ${pmenus} الاخبار`, rowId: ".? berita", description: "تابع اخر الاخبار"},
+	{title: `📩 ${pmenus} التحميلات`, rowId: ".? downloader", description: "حمل المقاطع من برامج التواصل"},
+	{title: `🎨 ${pmenus} الملصقات`, rowId: ".? stiker", description: "اصنع ملصقاتك"},
+	{title: `🎨 ${pmenus} الشعارات`, rowId: ".? logo", description: "اصنع شعارك"},
+	{title: `✏️ ${pmenus} اكنب`, rowId: ".? nulis", description: "ماله فايدة?"},
+	{title: `🎧 ${pmenus} الصوت`, rowId: ".? audio", description: "تغيير الصوت مع الفلاتر"},
+  {title: `🎧 ${pmenus}  قائمة الصوت`, rowId: ".soundmenu", description: "اكثر من 120 صوت"},
+	{title: `🏢 ${pmenus} المجموعة`, rowId: ".? group", description: "فقط للمجموعات"},
+	{title: `👑 ${pmenus} المشرفين`, rowId: ".? admin", description: "فقط للمشرفين"},
+	{title: `🗂️ ${pmenus} داتا بيس`, rowId: ".? database", description: "خزن ملفاتك على البوت"},
+	{title: `🛠️ ${pmenus} ادوات`, rowId: ".? tools", description: "بعض الادوات التي قد تساعدك"},
+	{title: `ℹ️ ${pmenus} معلومات`, rowId: ".? info", description: "معلومات عن البوت"},
+	{title: `👩‍💻 ${pmenus} المالك`, rowId: ".? owner", description: "اوامر المالك!"},
+	{title: `❓ ${pmenus} بدون فئة`, rowId: ".? nocategory", description: "اوامر اخرى!"},
 	]
   },
 ]
@@ -270,35 +270,35 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let usrs = db.data.users[m.sender]
 let tek = `*${ucapan()} ${conn.getName(m.sender)}*
 ┌–––––––––––––––––✥
-│「 Hai Kak👋 」
+│「 سـلام👋 」
 └┬❖ 「 ${conn.getName(m.sender)} 」
-┌┤❀  Bagaimana Harimu? 😄
-┊│❀  Terima Kasih Telah Menggunakan Bot Kami
-│└────────────┈ ⳹
-┊   「 *U s e r  I n f o 克* 」
-┊↬✗• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
-┊↬✗• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-┊↬✗• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
-┗–––––––––––––––––✥
-┌–––––––––––––––––✥
-┊   「 *S t a t u s  I n f o 比* 」
-┊↬✗• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
-┊↬✗• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
-┊↬✗• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
-┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
-┊↬✗• *ʟᴇᴠᴇʟ:* ${usrs.level}
-┊↬✗• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
-┗––––––––––––––––––✥
+ ┤❀   *مرحبا بك في البوت? 😄*
+ │❀  *يرجى استخدام الاوامر بحذر*
+ └────────────┈ 
+    「 *مـعـومـات الـمـستخـدم 克* 」
+• *الاسم:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+• *المنشن:* @${m.sender.split`@`[0]}
+• *الحالة:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+• *المميز:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
+
+
+    「 *مـعـلومـات الـحـالـة 比* 」
+• *مدة التشغيل:* ${mpt}
+• *الوقت:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
+• *المستخدم:* ${Object.keys(global.db.data.users).length}
+• *الحد:* ${usrs.limit}
+• *المستوى:* ${usrs.level}
+• *القوانين:* ${usrs.role}${usrs.premiumTime > 1 ? `
+
 ┊↬✗• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
 ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 `
 const listMessage = {
   text: tek,
-  footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
+  footer: '📮 *note:* اذا وجدت اخطاء او صعوبات في الاستخدام يرجى ابلاغ المالك',
   mentions: await conn.parseMention(tek),
-  title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `CLICK HERE ⎙`, 
+  title: `${htki} *قائمة الاوامر* ${htka}`,
+  buttonText: `اطغط هنا ⎙`, 
   sections
 }
   if (teks == '404') {
