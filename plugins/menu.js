@@ -244,8 +244,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `🐚 ${pmenus} صَدَفة`, rowId: ".? kerangajaib", description: "اوامر للتسلية"},
 	{title: `📑 ${pmenus} اقتباسات`, rowId: ".? quotes", description: "اقتباسات عشوائية"},
 	{title: `⛩️ ${pmenus} الانمي`, rowId: ".? anime", description: "اوامر للويبز"},
-	{title: `🔞 ${pmenus} مم`, rowId: ".? nsfw", description: ","},
-	{title: `🌟 ${pmenus} المميز`, rowId: ".? premium", description: "."},
 	{title: `🎭 ${pmenus}  دردشةالانونيموس`, rowId: ".? anonymous", description: "اشياء مالها فايدة"},
 	{title: `📖 ${pmenus} القران`, rowId: ".? quran", description: "اجعلها حسنة"},
 	{title: `🌎 ${pmenus} انترنت`, rowId: ".? internet", description: "تصفح عللى النت"},
