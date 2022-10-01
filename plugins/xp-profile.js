@@ -12,11 +12,17 @@ let handler = async (m, { conn }) => {
     let str = `
 ]──────────❏ *PROFILE* ❏──────────[
 💌 • *الاسم:* ${username} 
+🎐 • *:* ${registered ? name : ''}
 📧 • *المنشن:* @${who.replace(/@.+/, '')}
 📞 • *الرقم:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 🔗 • *الرابط:* https://wa.me/${who.split`@`[0]}
 🎨 • *العمر:* ${registered ? age : ''}
-
+${readMore}
+🌟 • *Premium:* ${premium ? "✅" :"❌"}
+⏰ • *PremiumTime:* 
+${clockString(user.premiumTime)}
+📑 • *التسجيل:* ${registered ? '✅': '❌'}
+`.trim()
     conn.sendButton(m.chat, str, botdate, pp, [[`${registered ? 'Menu':'Verify'}`, `${user.registered ? '.menu':'.verify'}`]], fkon, { contextInfo: { mentionedJid: [who], forwardingScore: 999, isForwarded: true}})
 }
 handler.help = ['profile [@user]']
