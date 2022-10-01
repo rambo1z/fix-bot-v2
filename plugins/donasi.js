@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `
 ┌─「قروب  • الدعم 」
-│ • *الرابط:* 
+│ • *الرابط:https://chat.whatsapp.com/L30GtP3peP6FfBzWk5MBdw* 
 ❏────
 `.trim()
   m.reply(text)
