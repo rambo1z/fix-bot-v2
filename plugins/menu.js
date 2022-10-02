@@ -223,15 +223,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	title: `${htki} الرئيسية ${htka}`,
 	rows: [
 	    {title: `⚡ ${pmenus} سرعة البوت`, rowId: ".speed", description: "يظهر سرعة استجابة البوت"},
-	    {title: `💌 ${pmenus} مالتك البوت`, rowId: ".owner", description: "قائمة الاوامر الخاصة بالمالك"},
-	    {title: `📔 ${pmenus} SCRIPT BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
-	]
-    },{
-	title: `${htki} الـدعـم ${htka}`,
-	rows: [
-	    {title: `🔖 ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-	    {title: `🌟 ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
-	    {title: `💹 ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	    {title: `💌 ${pmenus} مالك البوت`, rowId: ".owner", description: "قائمة الاوامر الخاصة بالمالك"},
 	]
 	},{
 	title: `${htki} القائمة ${htka}`,
