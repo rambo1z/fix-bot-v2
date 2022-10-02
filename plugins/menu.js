@@ -259,25 +259,26 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 
 let usrs = db.data.users[m.sender]
 let tek = `*${ucapan()} ${conn.getName(m.sender)}*
-┌–––––––––––––––––✥
-│「 سـلام👋 」
-└┬❖ 「 ${conn.getName(m.sender)} 」
- ┤❀   *مرحبا بك في البوت? 😄*
- │❀  *يرجى استخدام الاوامر بحذر*
- └────────────┈ 
+✥–––––––––––––––––✥
+           *「 سـلام👋 」*
+  ❖ 「 ${conn.getName(m.sender)} 」
+  ❀   *مرحبا بك في البوت? 😄*
+  ❀  *يرجى استخدام الاوامر بحذر*
+  ────────────────────┈ 
     「 *مـعـلومـات الـمـستخـدم 克* 」
-• *الاسم:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+    
+• *الاســم:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
 • *المنشن:* @${m.sender.split`@`[0]}
 • *الحالة:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 • *المميز:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
 
-
     「 *مـعـلومـات الـحـالـة 比* 」
-• *مدة التشغيل:* ${mpt}
-• *الوقت:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
+    
+• *مدة التشـغيل:* ${mpt}
+• *الـوقــت:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
 • *المستخدم:* ${Object.keys(global.db.data.users).length}
-• *الحد:* ${usrs.limit}
-• *المستوى:* ${usrs.level}
+• *الــحــد:* ${usrs.limit}
+• *الـمستوى:* ${usrs.level}
 • *القوانين:* ${usrs.role}${usrs.premiumTime > 1 ? `
 
 ┊↬✗• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
