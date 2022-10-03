@@ -1,12 +1,12 @@
 let handler = async (m, { conn, args, usedPrefix }) => {
-	let info = `*➞ ᴇxᴀᴍᴘʟᴇ:* ${usedPrefix}feed kucing
+	let info = `*➞ مثال:* ${usedPrefix}feed cat
 - - - - - - - - - - - - - - - - - - - - - - - - - 
-${htki} LIST PET ${htka}
+${htki} قائمة الحيوانات ${htka}
 🐈 • قطة
 🐕 • كلب
 🦊 • ثعلب
 🐎 • حصان`
-let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'ᴛʜᴀɴᴋs', 'ᴛʜᴀɴᴋʏᴏᴜ ^-^', '...', 'ᴛʜᴀɴᴋ ʏᴏᴜ~', 'ᴀʀɪɢᴀᴛᴏᴜ ^-^'])
+let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '...', 'ᴛʜᴀɴᴋ ʏᴏᴜ~', 'ᴀʀɪɢᴀᴛᴏᴜ ^-^'])
     let type = (args[0] || '').toLowerCase()
     let emo = (type == 'fox' ? '🦊':'' || type == 'cat' ? '🐈':'' || type == 'dog' ? '🐕':'' || type == 'horse' ? '🐴':'' ) 
     let user = global.db.data.users[m.sender]
@@ -16,8 +16,8 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'ᴛʜᴀɴᴋs', 'ᴛʜᴀɴᴋʏ�
     let anjing = global.db.data.users[m.sender].dog
     switch (type) {
         case 'fox':
-            if (rubah == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
-            if (rubah == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
+            if (rubah == 0) return conn.sendButton(m.chat, `${htki} لا يوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
+            if (rubah == 10) return conn.sendButton(m.chat, `${htki} المستوى الأعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
             let __waktur = (new Date - user.foxlastfeed)
             let _waktur = (600000 - __waktur)
             let waktur = clockString(_waktur)
@@ -39,8 +39,8 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'ᴛʜᴀɴᴋs', 'ᴛʜᴀɴᴋʏ�
             } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktur}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
             break
         case 'cat':
-            if (kucing == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
-            if (kucing == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
+            if (kucing == 0) return conn.sendButton(m.chat, `${htki} لا يوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
+            if (kucing == 10) return conn.sendButton(m.chat, `${htki} المستوى الأعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
             let __waktuc = (new Date - user.catlastfeed)
             let _waktuc = (600000 - __waktuc)
             let waktuc = clockString(_waktuc)
