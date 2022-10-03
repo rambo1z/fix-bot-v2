@@ -9,7 +9,7 @@ let buff = (buf == 0 ? '5' : '' || buf == 1 ? '10' : '' || buf == 2 ? '15' : '' 
     let count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0]) || Math.round((100 - user.health) / heal)))) * 1
     if (user.potion < count) return m.reply(`
  جرعتك غير كافية. انت لديك فقط  *${user.potion}* 🥤جرعة
-اكتب *${usedPrefix}buy potion ${count - user.potion}*  جرعة🥤لشراء
+اكتب *${usedPrefix}buy potion ${count - user.potion}*  جرعة🥤 لشراء
 `.trim())
     user.potion -= count * 1
     user.health += heal * count
