@@ -2,10 +2,10 @@ let handler = async (m, { conn, args, usedPrefix }) => {
 	let info = `*➞ ᴇxᴀᴍᴘʟᴇ:* ${usedPrefix}feed kucing
 - - - - - - - - - - - - - - - - - - - - - - - - - 
 ${htki} LIST PET ${htka}
-🐈 • ᴄᴀᴛ
-🐕 • ᴅᴏɢ
-🦊 • ғᴏx
-🐎 • ʜᴏʀsᴇ`
+🐈 • قطة
+🐕 • كلب
+🦊 • ثعلب
+🐎 • حصان`
 let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'ᴛʜᴀɴᴋs', 'ᴛʜᴀɴᴋʏᴏᴜ ^-^', '...', 'ᴛʜᴀɴᴋ ʏᴏᴜ~', 'ᴀʀɪɢᴀᴛᴏᴜ ^-^'])
     let type = (args[0] || '').toLowerCase()
     let emo = (type == 'fox' ? '🦊':'' || type == 'cat' ? '🐈':'' || type == 'dog' ? '🐕':'' || type == 'horse' ? '🐴':'' ) 
