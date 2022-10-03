@@ -2,22 +2,22 @@ let confirm = {}
 
 async function handler(m, { conn, args }) {
     //if (!isROwner) throw 'Dalam perbaikan'
-    if (m.sender in confirm) throw 'انت لاتزال في المقامرة انتظر حتى تنتهي!!'
+    if (m.sender in confirm) throw 'Kamu masih melakukan judi, tunggu sampai selesai!!'
     try {
         let user = global.db.data.users[m.sender]
         let count = (args[0] && number(parseInt(args[0])) ? Math.max(parseInt(args[0]), 1) : /all/i.test(args[0]) ? Math.floor(parseInt(user.money)) : 1) * 1
-        if ((user.money * 1) < count) return m.reply('💹 اموالك لاتكفي)
+        if ((user.money * 1) < count) return m.reply('💹 Uang kamu tidak cukup!!')
         if (!(m.sender in confirm)) {
             confirm[m.sender] = {
                 sender: m.sender,
                 count,
                 timeout: setTimeout(() => (m.reply('timed out'), delete confirm[m.sender]), 60000)
             }
-            let txt = ` هل انت متأكد انك تريد المقامرة (نعم/لا)\n\n*الرهان:* ${count} 💹\n⏰ 60s االمهلة`
+            let txt = `Apakah anda yakin mau melakukan judi (Y/n)\n\n*Taruhan:* ${count} 💹\n⏰ 60s Timeout`
             return conn.sendButton(m.chat, txt, author, null, [['✔️'], ['✖️']], m)
         }
     } catch (e) {
-        console.error(e
+        console.error(e)
         if (m.sender in confirm) {
             let { timeout } = confirm[m.sender]
             clearTimeout(timeout)
@@ -50,10 +50,10 @@ handler.before = async m => {
             }
             m.reply(`
 | *PLAYERS* | *POINT* |
-*🤖 اينو:*      ${Bot}
-*👤 انـت:*    ${Kamu}
+*🤖 BOT:*      ${Bot}
+*👤 KAMU:*    ${Kamu}
 
-Kamu *${status}*, kamu ${status == 'Menang' ? `حصلت على *+${count * 2}*` : status == 'Kalah' ? `خسرت *-${count * 1}*` : `حصلت على *+${Math.floor(count / 1.5)}*`} Money 💹
+Kamu *${status}*, kamu ${status == 'Menang' ? `Mendapatkan *+${count * 2}*` : status == 'Kalah' ? `Kehilangan *-${count * 1}*` : `Mendapatkan *+${Math.floor(count / 1.5)}*`} Money 💹
     `.trim())
             clearTimeout(timeout)
             delete confirm[m.sender]
@@ -80,7 +80,7 @@ Kamu *${status}*, kamu ${status == 'Menang' ? `حصلت على *+${count * 2}*` 
 
 handler.help = ['judi [jumlah]']
 handler.tags = ['rpg']
-handler.command = /^(judi|bet)مقامرة$/i
+handler.command = /^(judi|bet)$/i
 
 export default handler
 
