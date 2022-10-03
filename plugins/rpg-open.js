@@ -1,11 +1,11 @@
 const rewards = {
     common: {
-        money: 101,
-        exp: 201,
-        trash: 11,
-        potion: [0, 1, 0, 1, 0, 0, 0, 0, 0],
-        common: [0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
-        uncommon: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        xفلوس: 101,
+        xاكس_بيx: 201,
+        xهx: 11,
+        xx: [0, 1, 0, 1, 0, 0, 0, 0, 0],
+        xx: [0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+        xx: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     uncommon: {
         money: 201,
@@ -68,7 +68,7 @@ let handler = async (m, { command, args, usedPrefix }) => {
 Use Format *${usedPrefix}${command} [crate] [count]*
 Usage example: *${usedPrefix}${command} common 10*
 
-📍Crate list: 
+📍قائمة الصناديق: 
 ${Object.keys(listCrate).map((v) => `
 ${rpg.emoticon(v)}${v}
 `.trim()).join('\n')}
