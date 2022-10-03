@@ -16,8 +16,8 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
     let anjing = global.db.data.users[m.sender].dog
     switch (type) {
         case 'fox':
-            if (rubah == 0) return conn.sendButton(m.chat, `${htki} لا يوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
-            if (rubah == 10) return conn.sendButton(m.chat, `${htki} المستوى الأعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
+            if (rubah == 0) return conn.sendButton(m.chat, `${htki} لا يوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
+            if (rubah == 10) return conn.sendButton(m.chat, `${htki} المستوى الأعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
             let __waktur = (new Date - user.foxlastfeed)
             let _waktur = (600000 - __waktur)
             let waktur = clockString(_waktur)
@@ -32,15 +32,15 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
                         if (user.foxexp > naiklvl) {
                             user.fox += 1
                             user.foxexp -= (rubah * 100)
-                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['المخزون', '.inv'],['انظر لقدرات الحيوان', '.petshop']], m)
                         }
                     }
-                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
-            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktur}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
+                } else m.reply(`طعام حيوانك لايكفي`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktur}*`, null, [['المخزون', '.inv']], m)
             break
         case 'cat':
             if (kucing == 0) return conn.sendButton(m.chat, `${htki} لا يوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
-            if (kucing == 10) return conn.sendButton(m.chat, `${htki} المستوى الأعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
+            if (kucing == 10) return conn.sendButton(m.chat, `${htki} المستوى الأعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
             let __waktuc = (new Date - user.catlastfeed)
             let _waktuc = (600000 - __waktuc)
             let waktuc = clockString(_waktuc)
@@ -59,7 +59,7 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
                             conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
                         }
                     }
-                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
+                } else m.reply(`طعام حيوانك لايكفي`)
             } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktuc}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
             break
         case 'dog':
@@ -79,15 +79,15 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
                         if (user.dogexp > naiklvl) {
                             user.dog += 1
                             user.dogexp -= (anjing * 100)
-                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']], m)
                         }
                     }
-                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
-            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktua}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
+                } else m.reply(`طعام حيوانك لايكفي`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktua}*`, null, [['المخزون', '.inv']], m)
             break
         case 'horse':
-            if (kuda == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
-            if (kuda == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
+            if (kuda == 0) return conn.sendButton(m.chat, `${htki} لايوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
+            if (kuda == 10) return conn.sendButton(m.chat, `${htki} المستوى الاعلى ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
             let __waktuk = (new Date - user.horselastfeed)
             let _waktuk = (600000 - __waktuk)
             let waktuk = clockString(_waktuk)
@@ -102,14 +102,14 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
                         if (user.horseexp > naiklvl) {
                             user.horse += 1
                             user.horseexp -= (kuda * 100)
-                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , حيوانك زاد مستواه`,null, [['المخزون', '.inv'],['رؤية قدرات الحيوان', '.petshop']], m)
                         }
                     }
-                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
-            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktuk}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
+                } else m.reply(`طعام حيوانك لايكفي`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktuk}*`, null, [['المخزون', '.inv']], m)
             break
         default:
-            return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, info, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']], m)
+            return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, info, null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']], m)
     }
 }
 handler.help = ['feed [pet type]']
