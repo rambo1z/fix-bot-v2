@@ -6,14 +6,14 @@ async function handler(m, { conn, args }) {
     try {
         let user = global.db.data.users[m.sender]
         let count = (args[0] && number(parseInt(args[0])) ? Math.max(parseInt(args[0]), 1) : /all/i.test(args[0]) ? Math.floor(parseInt(user.money)) : 1) * 1
-        if ((user.money * 1) < count) return m.reply('💹 انت لاتملك الفلوس!!')
+        if ((user.money * 1) < count) return m.reply('💹 انت لاتملك المال!!')
         if (!(m.sender in confirm)) {
             confirm[m.sender] = {
                 sender: m.sender,
                 count,
                 timeout: setTimeout(() => (m.reply('timed out'), delete confirm[m.sender]), 60000)
             }
-            let txt = `هل انت متاكد انك تريد المقامرة (Y/n)\n\n*Taruhan:* ${count} 💹\n⏰ 60s المهلة`
+            let txt = `هل انت متاكد انك تريد المقامرة (Y/n)\n\n*الرهان بـ:* ${count} 💹\n⏰ 60s المهلة`
             return conn.sendButton(m.chat, txt, author, null, [['✔️'], ['✖️']], m)
         }
     } catch (e) {
@@ -49,11 +49,11 @@ handler.before = async m => {
                 user.money += (Math.floor(count / 1.5)) * 1
             }
             m.reply(`
-| *PLAYERS* | *POINT* |
+| *النقاط* | *اللاعبون* |
 *🤖 اينو:*      ${Bot}
 *👤 انت:*    ${Kamu}
 
-Kamu *${status}*, kamu ${status == 'Menang' ? `Mendapatkan *+${count * 2}*` : status == 'Kalah' ? `Kehilangan *-${count * 1}*` : `Mendapatkan *+${Math.floor(count / 1.5)}*`} Money 💹
+انت *${status}*, انت ${status == 'فزت' ? `Xحصلت علىX *+${count * 2}*` : status == 'خسرت' ? `Xلقد فقدتX *-${count * 1}*` : `خصلت على *+${Math.floor(count / 1.5)}*`} فلوس 💹
     `.trim())
             clearTimeout(timeout)
             delete confirm[m.sender]
