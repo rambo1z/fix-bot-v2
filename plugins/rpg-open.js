@@ -1,6 +1,6 @@
 const rewards = {
     صندوق: {
-         ,فلوس: 101
+          klok: 101,
         xاكس_بيx: 201,
         xزبالةx: 11,
         xجرعةx: [0, 1, 0, 1, 0, 0, 0, 0, 0],
@@ -109,7 +109,7 @@ ${Object.keys(crateReward).filter(v => v && crateReward[v] && !/legendary|pet|my
 }
 handler.help = ['open', 'gacha'].map(v => v + ' [crate] [count]')
 handler.tags = ['rpg']
-handler.command = /^(open|buka|فتح)$/i
+handler.command = /^(open|buka|gacha)$/i
 
 export default handler
 
