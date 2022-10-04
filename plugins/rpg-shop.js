@@ -1,54 +1,54 @@
-const items = {
+const العناصر = {
     buy: {
-        limit: {
-            exp: 999
+        الحد: {
+            اكس_بي: 999
         },
-        potion: {
-            money: 1250,
+        جرعة: {
+            فلوس: 1250,
         },
-        trash: {
-            money: 4,
+        زبالة: {
+            فلوس: 4,
         },
-        wood: {
-            money: 700
+        خشب: {
+            فلوس: 700
         },
-        rock: {
-            money: 850
+        حجر: {
+            فلوس: 850
         },
-        string: {
-            money: 400
+        خيط: {
+            فلوس: 400
         },
-        iron: { 
-        	money: 3000
+        حديد: { 
+        	فلوس: 3000
         }
     },
-    sell: {
-        potion: {
-            money: 125,
+    بيع: {
+        جرعة: {
+            فلوس: 125,
         },
-        trash: {
-            money: 2
+        زبالة: {
+            فلوس: 2
         },
-        wood: {
-            money: 600
+        خشب: {
+            فلوس: 600
         },
-        rock: {
-            money: 750
+        حجر: {
+            فلوس: 750
         },
-        string: {
-            money: 300
+        خيط: {
+            فلوس: 300
         },
-        iron: {
-            money: 2500
+        حديد: {
+            فلوس: 2500
         },
-        gold: {
-            money: 4700
+        ذهب: {
+            فلوس: 4700
         },
-        diamond: {
-            money: 9000
+        الماس: {
+           فلوس: 9000
         },
-        emerald: {
-            money: 15000
+        زمرد: {
+            فلوس: 15000
         }
     }
 }
@@ -57,10 +57,10 @@ let handler = async (m, { command, usedPrefix, args }) => {
     let user = global.db.data.users[m.sender]
     const listItems = Object.fromEntries(Object.entries(items[command.toLowerCase()]).filter(([v]) => v && v in user))
     const info = `
-Use Format *${usedPrefix}${command} [crate] [count]*
-Usage example: *${usedPrefix}${command} potion 10*
+نسق الاستخدام *${usedPrefix}${command} [crate] [count]*
+مثال على الاستخدام: *${usedPrefix}${command} potion 10*
     
-📍Items list: 
+📍قائمة الادوات: 
 ${Object.keys(listItems).map((v) => {
         let paymentMethod = Object.keys(listItems[v]).find(v => v in user)
         return `${global.rpg.emoticon(v)}${v} | ${listItems[v][paymentMethod]} ${global.rpg.emoticon(paymentMethod)}${paymentMethod}`.trim()
@@ -76,7 +76,7 @@ ${Object.keys(listItems).map((v) => {
         user[item] += total
         return m.reply(`You bought *${total}* ${global.rpg.emoticon(item)}${item}`)
     } else {
-        if (user[item] < total) return m.reply(`You don't have enough *${global.rpg.emoticon(item)}${item}* to sell, you only have ${user[item]} items`)
+        if (user[item] < total) return m.reply(`ليس لديك مايكفي *${global.rpg.emoticon(item)}${item}* لديك فقط.  للبيع ${user[item]} items`)
         user[item] -= total
         user.money += listItems[item].money * total
         return m.reply(`You sold *${total}* ${global.rpg.emoticon(item)}${item}`)
