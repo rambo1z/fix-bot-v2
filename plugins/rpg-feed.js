@@ -114,7 +114,7 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
 }
 handler.help = ['feed [pet type]']
 handler.tags = ['rpg']
-handler.command = /^(feed(ing)?)اطعام$/i
+handler.command = /^(feed(ing)?)$/i
 
 export default handler
 
