@@ -564,15 +564,15 @@ function clockStringP(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Sudah Dini Hari Kok Belum Tidur Kak? 🥱"
+  let res = " ?للحين مانايمٍِ 🥱"
   if (time >= 4) {
-    res = "Pagi Lord 🌄"
+    res = "صباح الخير 🌄"
   }
   if (time >= 10) {
-    res = "Selamat Siang Kak ☀️"
+    res = "متى الغدى ☀️"
   }
   if (time >= 15) {
-    res = "Selamat Sore Kak 🌇"
+    res = "مساء الخير 🌇"
   }
   if (time >= 18) {
     res = "Malam Kak 🌙"
