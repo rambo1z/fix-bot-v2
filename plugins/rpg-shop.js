@@ -3,7 +3,7 @@ const items = {
         limit: {
             exp: 999
         },
-        جرعة: {
+        p: {
             money: 1250,
         },
         trash: {
