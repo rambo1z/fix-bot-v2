@@ -83,7 +83,7 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
                         }
                     }
                 } else m.reply(`طعام حيوانك لايكفي`)
-            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktua}*`, null, [['المخزون', '.inv']], m)
+            } else conn.sendButton(m.chat, `${htki} تهدئة ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktua}*`, null, [['المخزون', '.inv']], m)
             break
         case 'horse':
             if (kuda == 0) return conn.sendButton(m.chat, `${htki} لايوجد ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['المخزون', '.inv'],['شراء حيوان', '.petshop']],m)
@@ -101,8 +101,8 @@ let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'شكرا', 'شكرا لك ^-^', '.
                         let naiklvl = ((kuda * 100) - 1)
                         if (user.horseexp > naiklvl) {
                             user.horse += 1
-                            user.horseexp -= (kuda * 100)
-                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , حيوانك زاد مستواه`,null, [['المخزون', '.inv'],['رؤية قدرات الحيوان', '.petshop']], m)
+                            user.horseexp -= (kuda * 100) 
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*xمبروكx!* , حيوانك زاد مستواه`,null, [['المخزون', '.inv'],['رؤية قدرات الحيوان', '.petshop']], m)
                         }
                     }
                 } else m.reply(`طعام حيوانك لايكفي`)
