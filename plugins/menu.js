@@ -229,18 +229,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	title: `${htki} القائمة ${htka}`,
 	rows: [
 	    {title: `💬 ${pmenus} الكل`, rowId: ".? all", description: "يظهر كل الاوامر"},
-	    {title: `🌱 ${pmenus} ار بي جي`, rowId: ".? rpg", description: " العاب ار بي جي!"},
-	{title: `✨ ${pmenus} اكس بي`, rowId: ".? xp", description: "ارفع مستواك!"},
 	{title: `🎮 ${pmenus} العاب`, rowId: ".? game", description: " العاب جماعية  >-<"},
-	{title: `🧩 ${pmenus} تسلية`, rowId: ".? fun", description: "اوامر مسلية"},
-	{title: `🐚 ${pmenus} صَدَفة`, rowId: ".? kerangajaib", description: "اوامر للتسلية"},
-	{title: `📑 ${pmenus} اقتباسات`, rowId: ".? quotes", description: "اقتباسات عشوائية"},
 	{title: `⛩️ ${pmenus} الانمي`, rowId: ".? anime", description: "اوامر للويبز"},
 	{title: `🎭 ${pmenus}  دردشةالانونيموس`, rowId: ".? anonymous", description: "اشياء مالها فايدة"},
 	{title: `📖 ${pmenus} القران`, rowId: ".? quran", description: "اجعلها حسنة"},
-	{title: `🌎 ${pmenus} انترنت`, rowId: ".? internet", description: "تصفح عللى النت"},
-  {title: `🌎 ${pmenus} الاخبار`, rowId: ".? berita", description: "تابع اخر الاخبار"},
-	{title: `📩 ${pmenus} التحميلات`, rowId: ".? downloader", description: "حمل المقاطع من برامج التواصل"},
 	{title: `🎨 ${pmenus} الملصقات`, rowId: ".? stiker", description: "اصنع ملصقاتك"},
 	{title: `🎨 ${pmenus} الشعارات`, rowId: ".? logo", description: "اصنع شعارك"},
 	{title: `✏️ ${pmenus} اكنب`, rowId: ".? nulis", description: "ماله فايدة?"},
@@ -252,7 +244,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `🛠️ ${pmenus} ادوات`, rowId: ".? tools", description: "بعض الادوات التي قد تساعدك"},
 	{title: `ℹ️ ${pmenus} معلومات`, rowId: ".? info", description: "معلومات عن البوت"},
 	{title: `👩‍💻 ${pmenus} المالك`, rowId: ".? owner", description: "اوامر المالك!"},
-	{title: `❓ ${pmenus} بدون فئة`, rowId: ".? nocategory", description: "اوامر اخرى!"},
 	]
   },
 ]
