@@ -228,10 +228,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	},{
 	title: `${htki} القائمة ${htka}`,
 	rows: [
-	    {title: `💬 ${pmenus} الكل`, rowId: ".? all", description: "يظهر كل الاوامر"},
 	{title: `🎮 ${pmenus} العاب`, rowId: ".? game", description: " العاب جماعية  >-<"},
 	{title: `⛩️ ${pmenus} الانمي`, rowId: ".? anime", description: "اوامر للويبز"},
-	{title: `🎭 ${pmenus}  دردشةالانونيموس`, rowId: ".? anonymous", description: "اشياء مالها فايدة"},
 	{title: `📖 ${pmenus} القران`, rowId: ".? quran", description: "اجعلها حسنة"},
 	{title: `🎨 ${pmenus} الملصقات`, rowId: ".? stiker", description: "اصنع ملصقاتك"},
 	{title: `🎨 ${pmenus} الشعارات`, rowId: ".? logo", description: "اصنع شعارك"},
