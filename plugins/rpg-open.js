@@ -1,5 +1,5 @@
 const rewards = {
-    common: {
+    صندوق: {
         xفلوس: 101,
         xاكس_بيx: 201,
         xزبالةx: 11,
@@ -7,7 +7,7 @@ const rewards = {
         xصندوقx: [0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
         xغير_معرفx: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
-    uncommon: {
+    غير_معرف: {
         xزبالةx: 201,
         xاكس_بيx: 401,
         xزبالةx: 31,
@@ -20,7 +20,7 @@ const rewards = {
         xحجرx: [0, 1, 0, 0, 0, 0],
         xخيطx: [0, 1, 0, 0, 0, 0]
     },
-    mythic: {
+    نادر: {
         xفلوسx: 301,
         xاكس_بيx: 551,
         xزبالةx: 61,
@@ -38,7 +38,7 @@ const rewards = {
         xحجرx: [0, 1, 0, 0, 0],
         xخيطx: [0, 1, 0, 0, 0]
     },
-    legendary: {
+    اسطوري: {
         xفلوسx: 401,
         xاكس_بيx: 601,
         xزبالةx: 101,
@@ -65,8 +65,8 @@ let handler = async (m, { command, args, usedPrefix }) => {
     let user = global.db.data.users[m.sender]
     let listCrate = Object.fromEntries(Object.entries(rewards).filter(([v]) => v && v in user))
     let info = `
-Use Format *${usedPrefix}${command} [crate] [count]*
-Usage example: *${usedPrefix}${command} common 10*
+استخدم النسسق *${usedPrefix}${command} [crate] [count]*
+مثال على الاستخدام: *${usedPrefix}${command} common 10*
 
 📍قائمة الصناديق: 
 ${Object.keys(listCrate).map((v) => `
@@ -77,7 +77,7 @@ ${rpg.emoticon(v)}${v}
     let count = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1
     if (!(type in listCrate)) return m.reply(info)
     if (user[type] < count) return m.reply(`
-الخاص بك *${rpg.emoticon(type)}${type} crate* لايكفي. انت اديك فقط ${user[type]} *${rpg.emoticon(type)}${type} crate*
+الخاص بك *${rpg.emoticon(type)}${type} crate* لايكفي. انت لديك فقط ${user[type]} *${rpg.emoticon(type)}${type} crate*
 اكتب *${usedPrefix}buy ${type} ${count - user[type]}* للشراء
 `.trim())
     // TODO: add pet crate
@@ -109,7 +109,7 @@ ${Object.keys(crateReward).filter(v => v && crateReward[v] && !/legendary|pet|my
 }
 handler.help = ['open', 'gacha'].map(v => v + ' [crate] [count]')
 handler.tags = ['rpg']
-handler.command = /^(open|buka|gacha)$/i
+handler.command = /^(open|buka|فتح)$/i
 
 export default handler
 
