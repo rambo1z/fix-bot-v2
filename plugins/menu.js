@@ -6,50 +6,6 @@ import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
 
-const defaultMenu = {
-  before: `
-%dash
-%m1 *المستحدم*
-%m2 *الاسم:* %name
-%m2 *المنشن:* %tag
-%m2 *الحالة:* %prems
-%m2 *الحد:* %limit
-%m2 *الفلوس:* %money
-%m2 *القوانين:* %role
-%m2 *المستوى:* %level [ %xp4levelup Xp For Levelup]
-%m2 *اكس بي:* %exp / %maxexp
-%m2 *المجموع Xp:* %totalexp
-%m3
-
-%m1 *الـيـوم*
-%m2 *%ucpn*
-%m2 *Days:* %week %weton
-%m2 *Date:* %date
-%m2 *Islamic Date:* %dateIslamic
-%m2 *Time:* %wib
-%m3
-
-%m1 *مـعـلـومـات*
-%m2 *اسم البوت:* %me
-%m2 *المود:* %mode
-%m2 *المنصة:* %platform
-%m2 *النوع* Node.Js
-%m2 *Baileys:* Multi Device
-%m2 *Prefix:* [ *%_p* ]
-%m2 *مدة التشغيل:* %muptime
-%m2 *داتا بيس:* %rtotalreg dari %totalreg
-%m3
-
-%m1 *معلومات الاوامر* 
-%m4 *Ⓟ* = مميز
-%m4 *Ⓛ* = محدود
-%m3
-%readmore
-`.trimStart(),
-  header: '%cc *%category* %c1',
-  body: '%c2 %cmd %isPremium %islimit',
-  footer: '%c3',
-  after: `%c4 %me`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	let tags
@@ -228,20 +184,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	},{
 	title: `${htki} القائمة ${htka}`,
 	rows: [
-	{title: `🎮 ${pmenus} العاب`, rowId: ".? game", description: " العاب جماعية  >-<"},
-	{title: `⛩️ ${pmenus} الانمي`, rowId: ".? anime", description: "اوامر للويبز"},
-	{title: `📖 ${pmenus} القران`, rowId: ".? quran", description: "اجعلها حسنة"},
 	{title: `🎨 ${pmenus} الملصقات`, rowId: ".? stiker", description: "اصنع ملصقاتك"},
-	{title: `🎨 ${pmenus} الشعارات`, rowId: ".? logo", description: "اصنع شعارك"},
-	{title: `✏️ ${pmenus} اكنب`, rowId: ".? nulis", description: "ماله فايدة?"},
 	{title: `📩 ${pmenus} التحميلات`, rowId: ".? downloader", description: "التحميل من البرامج"},	
 	{title: `🎧 ${pmenus} الصوت`, rowId: ".? audio", description: "تغيير الصوت مع الفلاتر"},
-  {title: `🎧 ${pmenus}  قائمة الصوت`, rowId: ".soundmenu", description: "اكثر من 120 صوت"},
 	{title: `🏢 ${pmenus} المجموعة`, rowId: ".? group", description: "فقط للمجموعات"},
 	{title: `👑 ${pmenus} المشرفين`, rowId: ".? admin", description: "فقط للمشرفين"},
-	{title: `🗂️ ${pmenus} داتا بيس`, rowId: ".? database", description: "خزن ملفاتك على البوت"},
-	{title: `🛠️ ${pmenus} ادوات`, rowId: ".? tools", description: "بعض الادوات التي قد تساعدك"},
-	{title: `ℹ️ ${pmenus} معلومات`, rowId: ".? info", description: "معلومات عن البوت"},
 	{title: `👩‍💻 ${pmenus} المالك`, rowId: ".? owner", description: "اوامر المالك!"},
 	]
   },
