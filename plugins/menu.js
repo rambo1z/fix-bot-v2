@@ -234,6 +234,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `🎨 ${pmenus} الملصقات`, rowId: ".? stiker", description: "اصنع ملصقاتك"},
 	{title: `🎨 ${pmenus} الشعارات`, rowId: ".? logo", description: "اصنع شعارك"},
 	{title: `✏️ ${pmenus} اكنب`, rowId: ".? nulis", description: "ماله فايدة?"},
+	{title: `📩 ${pmenus} التحميلات`, rowId: ".? downloader", description: "التحميل من البرامج"},	
 	{title: `🎧 ${pmenus} الصوت`, rowId: ".? audio", description: "تغيير الصوت مع الفلاتر"},
   {title: `🎧 ${pmenus}  قائمة الصوت`, rowId: ".soundmenu", description: "اكثر من 120 صوت"},
 	{title: `🏢 ${pmenus} المجموعة`, rowId: ".? group", description: "فقط للمجموعات"},
@@ -573,7 +574,7 @@ function ucapan() {
     res = "مساء الخير 🌇"
   }
   if (time >= 18) {
-    res = "Malam Kak 🌙"
+    res = "مساء الخير 🌙"
   }
   return res
 }
