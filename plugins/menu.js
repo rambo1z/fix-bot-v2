@@ -6,6 +6,8 @@ import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
 
+const defaultMenu = {
+  before: `
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	let tags
