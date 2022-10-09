@@ -9,9 +9,9 @@ import fetch from 'node-fetch'
 const defaultMenu = {
   before: `
 %dash
-%m1 *U S E R*
-%m2 *Name:* %name
-%m2 *Tag:* %tag
+%m1 *المـستخـدم*
+%m2 *الاسم:* %name
+%m2 *المنشن:* %tag
 %readmore
 `.trimStart(),
   header: '%cc *%category* %c1',
