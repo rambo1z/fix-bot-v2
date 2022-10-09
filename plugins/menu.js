@@ -8,6 +8,45 @@ import fetch from 'node-fetch'
 
 const defaultMenu = {
   before: `
+%dash
+%m1 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m3
+%m1 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m3
+%m1 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m2 
+%m3
+%m1 
+%m4 
+%m4 
+%m3
+%readmore
+`.trimStart(),
+  header: '%cc *%category* %c1',
+  body: '%c2 %cmd %isPremium %islimit',
+  footer: '%c3',
+  after: `%c4 %me`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	let tags
