@@ -30,11 +30,11 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 /*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'http://wa.me/9647735131102?text=*%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%F0%9F%A4%8D%D8%B9%D9%84%D9%8A%D9%83%D9%85'
+global.sig = 'https://instagram.com/_ctzhid'
 global.sgh = '-' //github
-global.sgc = 'https://chat.whatsapp.com/L30GtP3peP6FfBzWk5MBdw' //group whatsapp
+global.sgc = 'https://chat.whatsapp.com/Iu9I1k8FnXW1sXT41XIF50' //group whatsapp
 global.sdc = '-' //discord
-global.snh = 'http://wa.me/9647735131102?text=*%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%F0%9F%A4%8D%D8%B9%D9%84%D9%8A%D9%83%D9%85' // my youtube channel
+global.snh = 'https://www.youtube.com/channel/UCMx4e8anOq_Olt2nMSv0Cow' // my youtube channel
 
 /*============== PAYMENT ==============*/
 global.pdana = '08XXXXXXXXXX' //dana
@@ -109,21 +109,21 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 اينو بوت 」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘اينو بوت ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ اينو بوت '
-global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ الوقت: ${wktuwib}`
-global.bottime = `الـوقـت : ${wktuwib}`
-global.titlebot = `⫹⫺ اينو بوت | By اينو بوت`
-global.author = '                「 اينو-بوت  あ」'
+global.wm = '                「 WH-MODS-BOT-V1 」' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘WH-MODS-BOT-V1 ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm3 = '⫹⫺ WH-MODS-BOT-V1 '
+global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
+global.bottime = `T I M E : ${wktuwib}`
+global.titlebot = `⫹⫺ WhatsApp Bot | By WH-MODS-DEV`
+global.author = '                「 WH-MODS-BOT-V1  あ」'
 
 
 /*============== LOGO ==============*/
-global.thumb = 'https://i.imgur.com/eUkF27i.jpeg' //Main Thumbnail
-global.imagebot = 'https://i.imgur.com/eUkF27i.jpeg'
+global.thumb = 'https://i.ibb.co/XZrK6yQ/transformers.jpg' //Main Thumbnail
+global.imagebot = 'https://i.ibb.co/XZrK6yQ/transformers.jpg'
 global.giflogo = 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4'
-global.thumbs = ['https://i.imgur.com/eUkF27i.jpeg']
-global.fla = 'https://i.imgur.com/eUkF27i.jpeg'
+global.thumbs = ['https://i.ibb.co/XZrK6yQ/transformers.jpg']
+global.fla = 'https://i.ibb.co/XZrK6yQ/transformers.jpg'
 global.flaaa2 = [
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
@@ -149,7 +149,7 @@ global.hbunny = ['https://telegra.ph/file/2b71a8d46d29351479fbc.jpg', 'https://t
 global.hbeach = ['https://telegra.ph/file/14ae0ba2da77d74e6b80c.jpg', 'https://telegra.ph/file/b6905b77e6c7732592a13.jpg','https://telegra.ph/file/9da45a352eb4c40e5d641.jpg', 'https://telegra.ph/file/59e78846ee365975ee6e3.jpg','https://telegra.ph/file/1bf7dee46b83eb4c41d7d.jpg','https://telegra.ph/file/0525a7929f819cb8278f3.jpg']
 
 /*============== TEXT ==============*/
-global.wait = '```「▰▰▰▱▱▱▱▱▱▱」تحميل`'
+global.wait = '```「▰▰▰▱▱▱▱▱▱▱」Loading...```'
 global.eror = '```404 error```'
 
 /*=========== TYPE DOCUMENT ===========*/
@@ -173,7 +173,7 @@ global.dmenub2 = '┊' //body for info cmd on Default menu
 global.dmenuf = '┗––––––––––✦' //footer
 
 // COMMAND MENU
-global.dashmenu = '┅═┅═❏ *القائمة* ❏═┅═┅'
+global.dashmenu = '┅═┅═❏ *DASHBOARD* ❏═┅═┅'
 global.cmenut = '❏––––––『' //top
 global.cmenuh = '』––––––' //header
 global.cmenub = '┊✦ ' //body
@@ -189,8 +189,8 @@ global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'اينو-بوت
-global.stickauth = `By ©اينو-بوت
+global.stickpack = 'WH-MODS-BOT-V1'
+global.stickauth = `By ©WH-MODS-DEV`
 
 global.multiplier = 38 // The higher, The harder levelup
 
