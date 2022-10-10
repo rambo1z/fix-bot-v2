@@ -191,7 +191,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	title: `${htki} الرئيسية ${htka}`,
 	rows: [
 	    {title: `⚡ ${pmenus} سرعة البوت`, rowId: ".speed", description: "يظهر سرعة استجابة البوت"},
-	    {title: `💌 ${pmenus} مالك البوت`, rowId: ".owner", description: "قائمة الاوامر الخاصة بالمالك"},
 	]
 	},{
 	title: `${htki} القائمة ${htka}`,
