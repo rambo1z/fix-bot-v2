@@ -121,7 +121,7 @@ global.author = '                「 WH-MODS-BOT-V1  あ」'
 /*============== LOGO ==============*/
 global.thumb = 'https://i.imgur.com/eUkF27i.jpeg' //Main Thumbnail
 global.imagebot = 'https://i.imgur.com/eUkF27i.jpeg'
-global.giflogo = 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4'
+global.giflogo = 'http://wa.me/9647735131102?text=*السلام🤍عليكم'
 global.thumbs = ['https://i.imgur.com/eUkF27i.jpeg']
 global.fla = 'https://i.imgur.com/eUkF27i.jpeg'
 global.flaaa2 = [
@@ -173,7 +173,7 @@ global.dmenub2 = '┊' //body for info cmd on Default menu
 global.dmenuf = '┗––––––––––✦' //footer
 
 // COMMAND MENU
-global.dashmenu = '┅═┅═❏ *DASHBOARD* ❏═┅═┅'
+global.dashmenu = '┅═┅═❏ *القائمة* ❏═┅═┅'
 global.cmenut = '❏––––––『' //top
 global.cmenuh = '』––––––' //header
 global.cmenub = '┊✦ ' //body
